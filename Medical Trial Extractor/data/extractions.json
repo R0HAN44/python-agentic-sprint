@@ -1,0 +1,154 @@
+[
+  {
+    "trial_id": "NCT04512345",
+    "study_design": {
+      "phase": "3",
+      "randomized": true,
+      "blinding": "double-blind",
+      "control": "placebo-controlled",
+      "allocation_ratio": "1:1",
+      "duration_weeks": 24
+    },
+    "population": {
+      "condition": "moderate to severe rheumatoid arthritis",
+      "total_participants": 412,
+      "age_range_years": {
+        "minimum": 18,
+        "maximum": 65
+      }
+    },
+    "arms": [
+      {
+        "name": "Drug X",
+        "drug": "Drug X",
+        "dose": "50 mg",
+        "frequency": "once daily",
+        "participants": null
+      },
+      {
+        "name": "Placebo",
+        "drug": "placebo",
+        "dose": null,
+        "frequency": null,
+        "participants": null
+      }
+    ],
+    "outcomes": [
+      {
+        "name": "ACR20 response",
+        "type": "primary endpoint",
+        "timepoint": "week 12",
+        "results": [
+          {
+            "arm": "Drug X",
+            "response_rate_percent": 58.0
+          },
+          {
+            "arm": "Placebo",
+            "response_rate_percent": 29.0
+          }
+        ],
+        "p_value": "p<0.001"
+      }
+    ],
+    "adverse_events": {
+      "common": [
+        {
+          "event": "nausea",
+          "incidence_percent": 12.0
+        },
+        {
+          "event": "headache",
+          "incidence_percent": 9.0
+        },
+        {
+          "event": "upper respiratory infection",
+          "incidence_percent": 7.0
+        }
+      ],
+      "serious": [
+        {
+          "arm": "Drug X",
+          "number_of_events": 3,
+          "considered_treatment_related": false
+        }
+      ]
+    }
+  },
+  {
+    "trial_id": null,
+    "study_design": {
+      "phase": null,
+      "randomized": null,
+      "blinding": null,
+      "control": null,
+      "allocation_ratio": null,
+      "duration_weeks": null
+    },
+    "population": {
+      "condition": "inferior STEMI",
+      "total_participants": null,
+      "age_range_years": null
+    },
+    "arms": [],
+    "outcomes": [],
+    "adverse_events": {
+      "common": [],
+      "serious": []
+    }
+  },
+  {
+    "trial_id": null,
+    "study_design": {
+      "phase": null,
+      "randomized": null,
+      "blinding": null,
+      "control": null,
+      "allocation_ratio": null,
+      "duration_weeks": null
+    },
+    "population": {
+      "condition": "early-stage breast cancer",
+      "total_participants": 1850,
+      "age_range_years": null
+    },
+    "arms": [
+      {
+        "name": "Adjuvant letrozole",
+        "drug": "letrozole",
+        "dose": null,
+        "frequency": null,
+        "participants": null
+      },
+      {
+        "name": "Tamoxifen",
+        "drug": "tamoxifen",
+        "dose": null,
+        "frequency": null,
+        "participants": null
+      }
+    ],
+    "outcomes": [
+      {
+        "name": "Disease-free survival",
+        "type": null,
+        "timepoint": "5-year",
+        "results": [
+          {
+            "arm": "Adjuvant letrozole",
+            "response_rate_percent": 91.0
+          },
+          {
+            "arm": "Tamoxifen",
+            "response_rate_percent": 84.0
+          }
+        ],
+        "p_value": null
+      }
+    ],
+    "adverse_events": {
+      "common": [],
+      "serious": []
+    }
+  }
+]
