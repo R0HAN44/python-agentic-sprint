@@ -1,5 +1,8 @@
 # from utils import extract_agent, save_extracted_data
+
 import asyncio
+from schemas.testing import Trial
+from pydantic import ValidationError
 
 # unstructured_medical_text = input("Enter the Clinical/Medical/Research texts from which structured data to be extracted:\n")
 
@@ -57,5 +60,48 @@ async def main():
     tasks = [asyncio.create_task(process_event("Event " + str(event))) for event in range(number_of_events)]
     await asyncio.gather(*tasks)
 
-if __name__ == "__main__":
-    asyncio.run(main())
+
+try:
+    trial = {
+        "title": "Diabetes Treatment Study",
+        "phase": "Phase 3",
+        "participants": 90,
+        "population": {
+            "min_age": 18,
+            "max_age": 65,
+            "condition": "Type 2 Diabetes"
+        },
+        "interventions": [
+            {
+                "name": "Drug A",
+                "dosage": "500 mg"
+            },
+            {
+                "name": "Drug B",
+                "dosage": "250 mg"
+            }
+        ],
+        "outcomes": [
+            {
+                "name": "HbA1c reduction",
+                "type": "primary"
+            },
+            {
+                "name": "Body weight change",
+                "type": "secondary"
+            }
+        ]
+    }
+    validated_trial_data = Trial.model_validate(trial)
+    print(validated_trial_data)
+except ValidationError as error:
+    print(error.errors())
+
+
+# print(trial.model_dump())
+
+# if __name__ == "__main__":
+    # asyncio.run(main())
+
+
+

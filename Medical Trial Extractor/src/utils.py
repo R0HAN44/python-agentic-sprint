@@ -3,7 +3,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import json
 
-from schemas import TrialExtraction
+from schemas.schemas import TrialExtraction
 
 DATA_FILE = Path(__file__).parent.parent / "data" / "extractions.json"
 

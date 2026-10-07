@@ -3,8 +3,6 @@
 venv/
 env/
 
-settings.json
-
 # Python cache
 __pycache__/
 *.py[cod]
