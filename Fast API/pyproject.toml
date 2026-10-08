@@ -1,0 +1,9 @@
+[project]
+name = "fast-api"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.142.2",
+]
+[tool.fastapi]
+entrypoint = "src.main:app"
