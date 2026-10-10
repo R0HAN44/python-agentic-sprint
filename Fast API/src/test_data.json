@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "Efficacy and Safety of Metformin XR in Adults With Type 2 Diabetes",
+    "study_type": "Interventional",
+    "phase": "Phase 3",
+    "registration_id": null,
+    "sponsor": "ABC Pharmaceuticals"
+  },
+  "population": {
+    "condition": "Type 2 diabetes mellitus",
+    "sample_size": 250,
+    "min_age": 30,
+    "max_age": 65,
+    "sex": "All"
+  },
+  "inclusion_criteria": [
+    "Adults aged 30–65 years",
+    "Diagnosed with type 2 diabetes mellitus",
+    "HbA1c between 7% and 10%",
+    "Inadequate glycemic control despite lifestyle modification"
+  ],
+  "exclusion_criteria": [
+    "Severe renal impairment",
+    "Pregnancy or breastfeeding",
+    "Known allergy to metformin"
+  ],
+  "interventions": [
+    {
+      "name": "Metformin XR",
+      "type": "Drug",
+      "dosage": "1000 mg",
+      "route": "Oral",
+      "frequency": "Once daily",
+      "duration": "24 weeks"
+    }
+  ],
+  "outcomes": [
+    {
+      "name": "Change in HbA1c from baseline",
+      "type": "Primary",
+      "measurement": "HbA1c",
+      "timepoint": "Week 24"
+    },
+    {
+      "name": "Change in fasting plasma glucose",
+      "type": "Secondary",
+      "measurement": "Fasting plasma glucose",
+      "timepoint": "Week 12"
+    },
+    {
+      "name": "Change in fasting plasma glucose",
+      "type": "Secondary",
+      "measurement": "Fasting plasma glucose",
+      "timepoint": "Week 24"
+    }
+  ],
+  "adverse_events": [
+    {
+      "name": "Nausea",
+      "frequency": "Common",
+      "severity": "Mild",
+      "related_to_intervention": true
+    },
+    {
+      "name": "Diarrhea",
+      "frequency": "Common",
+      "severity": "Mild",
+      "related_to_intervention": true
+    }
+  ]
+}
