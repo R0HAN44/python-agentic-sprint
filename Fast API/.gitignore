@@ -3,6 +3,10 @@
 venv/
 env/
 
+#DATA
+data/
+output/
+
 # Python cache
 __pycache__/
 *.py[cod]
