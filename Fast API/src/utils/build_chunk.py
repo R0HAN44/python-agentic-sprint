@@ -1,8 +1,5 @@
 
-try:
-    from ..schemas import DocumentChunk
-except (ImportError, ValueError):
-    from src.schemas import DocumentChunk
+from ..schemas import DocumentChunk
 from .chunk_ids import generate_chunk_id
 
 

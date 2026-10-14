@@ -88,16 +88,31 @@ async def extract(request : ExtractRequest) -> Trial:
     logger.info("Successfully returned extracted data")
     return extracted_trial_data
 
+@app.get("/health/db")
+async def health_db():
+    from .db.session import check_database_health
+    health = await check_database_health()
+    status_code = 200 if health["status"] == "healthy" else 503
+    return JSONResponse(status_code=status_code, content=health)
+
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
 def main():
     chunks = chunk_section(
-            text=sample_document_text,
-            document_title="Clinical Trial A",
-            section_path=["Methods"],
-            chunk_size = 600,
-            chunk_overlap =50
-        )
-    
+        text=sample_document_text,
+        document_title="Clinical Trial A",
+        section_path=["Methods"],
+        chunk_size=600,
+        chunk_overlap=50,
+    )
+
     for chunk in chunks:
-        print(chunk,"\n")   
-        
-main()
+        print(chunk, "\n")
+
+
+if __name__ == "__main__":
+    main()

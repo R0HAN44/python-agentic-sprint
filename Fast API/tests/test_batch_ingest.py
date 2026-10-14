@@ -70,7 +70,7 @@ def test_password_protected_pdf_raises_error(tmp_path):
     p.insert_text((50, 50), "Classified Clinical Dossier")
     doc.save(
         str(enc_file),
-        encryption=pymupdf.PDF_ENCRYPT_AES_256,
+        encryption=pymupdf.mupdf.PDF_ENCRYPT_AES_256,
         user_pw="secret123",
         owner_pw="owner123",
     )
